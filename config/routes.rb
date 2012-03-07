@@ -4,7 +4,7 @@ Blue::Application.routes.draw do
   root :to => "home#index"
   get "home/index"
 
-  match '/(:url)' => 'pages#show', :url => 'show'
   resources :pages
+  match '/(:url)' => 'pages#show', :url => 'show'
 
 end
