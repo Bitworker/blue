@@ -1,6 +1,6 @@
+<%- title "Blue - #{@page.title}" %>
 <h2><%= @page.title %></h2>
 <%= markdown(@page.content) %>
-
 <% if user_signed_in? %>
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>

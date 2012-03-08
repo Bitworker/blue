@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blue - A Simple CMS</title>
+  <title><%= content_for?(:title) ? content_for(:title) : "Blue" %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
- <% if user_signed_in? %>
-<div id="user_login_box" style="float:right">
-  <%= current_user.email %> |
-  <%= link_to 'My info', edit_user_registration_path %> |
-  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-</div>
-<% end %>
-
-<%= yield %>
-
+  <% if user_signed_in? %>
+  <div id="user_login_box" style="float:right">
+    <%= current_user.email %> |
+    <%= link_to 'My info', edit_user_registration_path %> |
+    <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+  </div>
+  <% end %>
+  <%= yield %>
 </body>
 </html>
