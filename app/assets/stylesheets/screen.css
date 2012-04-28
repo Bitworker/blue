@@ -583,6 +583,33 @@ a.button {
   padding: 15px 14px 17px;
 }
 
+/* Site Navigation
+------------------------- */
+
+#logo {
+  float: left;
+  line-height: 0;
+}
+
+nav[role="navigation"] {
+  float: right;
+  text-align: right;
+  width: 300px;
+  display: block;
+}
+
+nav[role="navigation"] ul li {
+  float: left;
+  width: 20%;
+  margin: 14px 0 0 0;
+}
+
+nav[role="navigation"] ul li a {
+  font-size: 1em;
+  line-height: 1.3em;
+  text-decoration: none;
+}
+
 /* Tabs
 -------------------------------------------------- */
 

@@ -29,7 +29,8 @@
 <% end %>
 <header id="masthead">
   <div class="container">
-    <h1><a href="/" rel="home">Jason Melgoza</a></h1>
+    <%= render "shared/brandinfo" %>
+    <%= render "shared/navigation" %>
   </div>
 </header>
 <div id="body">
@@ -39,7 +40,7 @@
 </div>
 <footer id="superfooter">
   <div class="container">
-    <p><a href="#">Follow Me on Twitter</a></p>
+    <%= render "shared/contentinfo" %>
   </div>
 </footer>
 <%= javascript_include_tag "application" %>
