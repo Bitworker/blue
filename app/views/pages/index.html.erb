@@ -13,9 +13,9 @@
 
 <% @pages.each do |page| %>
   <tr>
-    <td><%= page.title %></td>
+    <td><%= link_to page.title, :action => 'show', :id => page %></td>
     <td><%= page.url %></td>
-    <td><%= link_to 'Show', page %></td>
+    <td></td>
     <td><%= link_to 'Edit', edit_page_path(page) %></td>
     <td><%= link_to 'Destroy', page, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
